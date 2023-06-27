@@ -1,0 +1,28 @@
+@use "variables/variables" as var;
+@forward "table/table";
+@forward "header/header.scss";
+@forward "character/character";
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: var.$main-text-color;
+  font-family: sans-serif;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var.$main-bg-color;
+  min-height: 100vh;
+}

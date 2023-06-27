@@ -1,0 +1,27 @@
+@use "../variables/variables" as var;
+#characters-table {
+  padding-block: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+@media screen and (min-width: var.$med-breakpoint) and (max-width: (var.$large-breakpoint - 1px)) {
+  #characters-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: var.$large-breakpoint) and (max-width: (var.$xl-breakpoint - 1px)) {
+  #characters-table {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: var.$xl-breakpoint) and (max-width: (var.$xxl-breakpoint - 1px)) {
+  #characters-table {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: var.$xxl-breakpoint) {
+  #characters-table {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

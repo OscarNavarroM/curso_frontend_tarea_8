@@ -1,0 +1,25 @@
+@use "../variables/variables" as var;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 0.8rem;
+  background-color: var.$header-bg-color;
+  color: var.$header-text-color;
+}
+.header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+@media screen and (min-width: var.$med-breakpoint) and (max-width: (var.$large-breakpoint - 1px)) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: var.$large-breakpoint) {
+  .header h1 {
+    font-size: 2rem;
+  }
+}
